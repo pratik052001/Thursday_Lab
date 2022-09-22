@@ -1,0 +1,94 @@
+import java.util.*;
+public class Factorial {
+public static void main(String[] args) {
+	Scanner a=new Scanner(System.in);
+	System.out.println(" 1.Factorial of number \n 2.Addition of two number \n 3.Amstrong \n 4.Fibonacci series of two number \n 5.number is prime or not \n Please enter the your choice :");
+	int choice=a.nextInt();
+	switch(choice) { // use for what choice user want
+	case 1:
+	System.out.println("Enter the number :");
+	int number=a.nextInt(); //to get value from user 
+	int factorial=1; 
+	for(int i=number;i>=1;i--) //to decrease 
+	{
+	 factorial=factorial*i; //Formula
+	}
+	System.out.println("The Factorial of number is :"+factorial);
+	break;
+	
+	case 2:
+	System.out.println("Enter the number1 :");
+	int number1=a.nextInt(); //to get input from user
+	System.out.println("Enter the number2 :");
+	int number2=a.nextInt();//to get input from user
+	int number9=number1+number2; //formula
+	System.out.println("The Addition of Number1 and Number2 is :"+number9);
+	break;
+	
+	case 3:
+	System.out.println("Enter a number :");
+	int number4=a.nextInt(); // to take input from user
+	int temp=number4;
+	int reminder,amstrong=0;
+	while(number4>0) // condition number is not equal to 0
+	{
+		reminder=number4%10;
+		amstrong=amstrong+reminder*reminder*reminder;
+		number4=number4/10;
+		/* formula*/
+	}
+	if(temp==amstrong) // to check amstrong is equal to temp variable
+	{
+		System.out.println("The number is amstrong number :"+amstrong);
+	}
+	else {
+		System.out.println("The number is not amstrong :"+amstrong);
+	}
+	break;
+	
+	case 4:
+	System.out.println("Enter the first number :");
+	int number5=a.nextInt();//to get input from user
+	System.out.println("Enter the second number :");
+	int number6=a.nextInt();//to get input from user
+	int number7;
+	int count=10;
+	for(int i=2;i<count;i++)
+	{
+		number7=number5+number6; //formula
+		System.out.println("the fibonacci series of given numberis "+number7);
+		number5=number6; // use swaping to variable goes in previous variable
+		number6=number7; // use swaping to variable goes in previous variable
+	}
+	break;
+	
+	case 5:
+	System.out.println("Enter the number :");
+	int number8=a.nextInt(); // to get value from user
+	int temp1=0,m=0;
+	m=number8/2; //formula
+	if(number8==0||number8==1) //to check number is not prime
+	{
+		System.out.println("A number is not prime number :" + number8);
+	}
+	else {
+		for(int i=2;i<=m;i++) //condition
+		{
+			if(number8%i==0) // to check number is not prime
+			{
+				System.out.println("A number is not prime number :"+number8);
+				temp1=1;
+				break;
+			}
+		}
+		if(temp1==0)
+		{
+			System.out.println("A number is a prime number :"+number8);
+		}
+	}
+	break;
+	default:
+		System.out.println("Enter valid number :");
+	}//end switch statement
+}
+}
