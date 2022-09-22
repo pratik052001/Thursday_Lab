@@ -1,0 +1,24 @@
+import java.util.*;
+public class Reverse {
+public static void main(String[] args) {
+	int number,reverse=0,reminder;
+	Scanner sc=new Scanner(System.in); 
+	System.out.println("Enter the Number :");
+	number=sc.nextInt();// to get input from user
+	while(number>0)
+	{
+		reminder=number%10; 
+		reverse=reverse*10+reminder; 
+		number=number/10; 
+		/* Formula*/
+	}
+	System.out.println("The reverse of Number is:"+reverse); //it is use to print reverse of number
+	if(reverse==number) //to check number is equal to reverse
+	{
+		System.out.println("The num is Palandroma :"+reverse);
+	}
+	else {
+		System.out.println("The num is not Palandroma :"+reverse);
+	}
+}
+}
