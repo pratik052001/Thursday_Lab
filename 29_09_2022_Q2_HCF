@@ -1,0 +1,16 @@
+import java.util.*;
+public class Hcf {
+public static void main(String[] args) {
+	int hcf=0;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the First Number :");
+	int a=sc.nextInt();//input from user
+	System.out.println("Enter the Second Number :");
+	int b=sc.nextInt();//input from user
+	for(int i=1;i<=a ||i<=b;i++)
+		if(a%i==0 && b%i==0) { //to check a and b is divisible by any number
+			hcf=i; //store the value of i in hcf variable
+		}
+	System.out.println("HCF of given two number is ::"+hcf); //print hcf
+}
+}
