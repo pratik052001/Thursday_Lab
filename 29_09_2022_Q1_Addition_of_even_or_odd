@@ -1,0 +1,28 @@
+import java.util.*;
+public class Sum {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int add=0; 
+	int sum=0;
+	System.out.println("Enter starting Point :");  
+	int n=sc.nextInt();//input from user
+	System.out.println("Enter End Point :");
+	int m=sc.nextInt();//input from user
+	for(int i=n;i<=m;i++) {
+		if(i%2==0) // to check number is even
+		{
+		    add=add+i; //addition formula
+		    System.out.println("\tThe Even no is : "+i);
+			
+		}
+		else
+		{//it is odd numbers
+			sum=sum+i; //addition formula
+			System.out.print("\tThe Odd no is : " +i);
+				}
+	}//end loop	
+	System.out.println("\nThe addition of Odd NO is :"+sum);
+	System.out.println("The addition of even no is :"+add);
+
+}
+}
