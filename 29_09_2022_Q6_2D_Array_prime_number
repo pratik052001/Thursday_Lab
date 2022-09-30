@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Prime
+{
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number of rows (m): ");
+        int m = in.nextInt();
+        System.out.print("Enter number of columns (n): ");
+        int n = in.nextInt();
+
+        int arr[][] = new int[m][n];
+        int r = 0, c = 0;
+        int total = m * n;
+        int count = 0;
+        for (int i = 2; count < total; i++) {
+            
+            int div = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    div++;
+                }
+            }
+
+            if (div == 2) {
+                arr[r][c++] = i;
+                count++;
+                if (c == n) {
+                    r++;
+                    c = 0;
+                }
+            }
+
+        }
