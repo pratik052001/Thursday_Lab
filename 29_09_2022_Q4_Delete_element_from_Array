@@ -1,0 +1,51 @@
+import java.util.*;
+public class question4
+{
+	public static void main(String[] args)
+	{
+		int i, n, x, temp = 1, loc = 0; 
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number of elements in array : "); 
+		n = sc.nextInt();// Accept the number of elements
+		int arr[] = new int[n];
+		System.out.println("Input the array elements : "); 
+		for (i = 0; i < n; i++)
+		{
+			
+			arr[i] = sc.nextInt();// Accept the number of array elements
+
+		}	
+		System.out.print("\nEnter the element you want to delete:"); 
+	        x = sc.nextInt(); //Accept the number from array which user want to delete
+		for (i = 0; i < n; i++)
+		{      
+			if (arr[i] == x) 
+			{      //If x found in array
+				temp = 1;
+				loc = i;
+				break;
+			} 
+			else 
+			{
+				temp = 0;
+			}
+		}
+		if (temp == 1)
+		{          
+			for (i = loc + 1; i < n; i++)
+			{
+				arr[i - 1] = arr[i];       //reduce the size of the array and move all elements
+			}
+			System.out.println("After Deleting:");
+			for (i = 0; i < n - 2; i++) 
+			{
+				System.out.print(arr[i] + ",");
+			}
+			System.out.print(arr[n - 2]);
+		} 
+		else 
+		{
+			System.out.println("Element not found");
+		}
+	}
+}
